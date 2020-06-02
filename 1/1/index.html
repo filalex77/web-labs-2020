@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lab 1/1</title>
+</head>
+
+<body>
+    <h2>&lt;article&gt;</h2>
+    <article>
+        <h3>What is Vue.js?</h3>
+        <p>
+            Vue (pronounced /vjuː/, like view) is a progressive framework
+            for building user interfaces. Unlike other monolithic
+            frameworks, Vue is designed from the ground up to be
+            incrementally adoptable. The core library is focused on the
+            view layer only, and is easy to pick up and integrate with
+            other libraries or existing projects.
+        </p>
+    </article>
+    <hr />
+
+    <h2>&lt;aside&gt;</h2>
+    <p>
+        The official guide assumes intermediate level knowledge of HTML,
+        CSS, and JavaScript. If you are totally new to frontend
+        development, it might not be the best idea to jump right into a
+        framework as your first step - grasp the basics then come back!
+        Prior experience with other frameworks helps, but is not required.
+    </p>
+
+    <hr />
+
+    <h2>&lt;audio&gt; and &lt;source&gt;</h2>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio tag.
+    </audio>
+    <hr />
+
+    <h2>&lt;bdi&gt;</h2>
+    <p>Hello in different languages</p>
+    <ul>
+        <li>Spanish: <bdi>¡Hola!</bdi></li>
+        <li>Japanese: <bdi>こんにちは！</bdi></li>
+        <li>Arabic: <bdi>مرحبا!</bdi></li>
+    </ul>
+    <hr />
+
+    <h2>&lt;canvas&gt;</h2>
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    </script>
+    <hr />
+
+    <h2>&lt;datalist&gt;</h2>
+    <input list="linux distributions" />
+
+    <datalist id="linux distributions">
+        <option value="Fedora"> </option>
+        <option value="Arch"> </option>
+        <option value="Gentoo"> </option>
+        <option value="NixOS"> </option>
+        <option value="Linux From Scratch"> </option>
+        <option value="Ubuntu"> </option>
+    </datalist>
+    <hr />
+
+    <h2>&lt;dialog&gt;</h2>
+    <dialog open>
+        <p>Hello, I am a dialog!</p>
+    </dialog>
+    <hr />
+
+    <h2>&lt;embed&gt;</h2>
+    <embed src="https://www.w3schools.com/tags/snippet.html" />
+    <hr />
+
+    <figure>
+        <img src="https://www.w3schools.com/tags/pic_trulli.jpg" alt="Trulli" style="width: 50%;" />
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+    <hr />
+
+    <h2>&lt;footer&gt;</h2>
+    <footer>
+        <p>Author: Oleksii Filonenko</p>
+        <p>
+            Email:
+            <a href="mailto:someone@example.com">brightone@protonmail.com</a>.
+        </p>
+    </footer>
+    <hr />
+
+    <hr />
+    <h2>&lt;header&gt;</h2>
+    <article>
+        <header>
+            <h1>This is h1 - important stuff</h1>
+            <h2>This is h2 - less important stuff</h2>
+            <p>This is a p - regular information</p>
+        </header>
+        <p>Continuation of the main page content</p>
+    </article>
+    <hr />
+
+    <h2>&lt;main&gt;</h2>
+    <main>
+        <h2>Linux Distributions</h2>
+        <p>Ubuntu, Debian and Fedora are one of the most used Linux distributions today.</p>
+
+        <article>
+            <h3>Ubuntu</h3>
+            <p>
+                Ubuntu is a Linux distribution based on Debian mostly composed
+                of free and open-source software. Ubuntu is officially released
+                in three editions: Desktop, Server, and Core for the Internet
+                of Things devices and robots.
+            </p>
+        </article>
+
+        <article>
+            <h3>Debian</h3>
+            <p>
+                Debian, also known as Debian GNU/Linux, is a Linux distribution
+                composed of free and open-source software, developed by the
+                community-supported Debian Project, which was established by
+                Ian Murdock on August 16, 1993. Debian is also the basis for
+                many other distributions, most notably Ubuntu.
+        </article>
+
+        <article>
+            <h3>Fedora</h3>
+            <p>
+                Fedora is a Linux distribution developed by the community-supported Fedora
+                Project which is sponsored primarily by Red Hat. Fedora contains software
+                distributed under various free and open-source licenses and aims to be on the
+                leading edge of free technologies. Fedora is the upstream source of the
+                commercial Red Hat Enterprise Linux distribution.
+            </p>
+        </article>
+    </main>
+    <hr />
+
+    <h2>&lt;mark&gt;</h2>
+    <p>You can buy a <mark>VPN service subscription</mark> to stay private.</p>
+    <hr />
+
+    <h2>&lt;meter&gt;</h2>
+    <label for="upload">Upload progress</label>
+    <meter id="upload" value="42" min="0" max="100">42 out of 100</meter><br />
+    <hr />
+
+    <h2>&lt;nav&gt;</h2>
+    <nav>
+        <a href="/html/">HTML</a>
+        | <a href="/css/">CSS</a>
+        | <a href="/js/">JavaScript</a>
+    </nav>
+    <hr />
+
+    <h2>&lt;output&gt;</h2>
+    <form oninput="c.value=parseInt(a.value)*parseInt(b.value)">
+        0 <input type="range" id="a" value="50" />100 *<input type="number" id="b" value="3" />
+        =<output name="c" for="a b"></output>
+    </form>
+    <hr />
+
+    <h2>&lt;picture&gt;</h2>
+    <picture>
+        <source media="(min-width: 650px)" srcset="https://www.w3schools.com/TAGS/img_pink_flowers.jpg" />
+        <source media="(min-width: 465px)" srcset="https://www.w3schools.com/TAGS/img_white_flower.jpg" />
+        <img src="https://www.w3schools.com/TAGS/img_orange_flowers.jpg" alt="Flowers" style="width: auto;" />
+    </picture>
+    <hr />
+
+    <h2>&lt;progress&gt;</h2>
+    <label for="file">Downloading progress</label>
+    <progress id="file" value="32" max="100"> 32% </progress>
+    <hr />
+
+    <h2>&lt;section&gt;</h2>
+    <section>
+        <h2>WWF</h2>
+        <p>The World Wide Fund for Nature (WWF) is....</p>
+    </section>
+    <hr />
+
+    <h2>&lt;summary&gt;</h2>
+    <details>
+        <summary>Copyright 1999-2014.</summary>
+        <p>- by Refsnes Data. All Rights Reserved.</p>
+        <p>
+            All content and graphics on this web site are the property of
+            the company Refsnes Data.
+        </p>
+    </details>
+    <hr />
+
+    <h2>&lt;template&gt;</h2>
+    <template>
+        <h2>Flower</h2>
+        <img src="img_white_flower.jpg" />
+    </template>
+    <hr />
+
+    <h2>&lt;time&gt;</h2>
+    <p>We open at <time>10:00</time> every morning.</p>
+
+    <p>
+        I have a date on
+        <time datetime="2008-02-14 20:00">Valentines day</time>.
+    </p>
+    <hr />
+
+    <h2>&lt;video&gt; and &lt;track&gt;</h2>
+    <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/TAGS/movie.mp4" type="video/mp4" />
+        <source src="https://www.w3schools.com/TAGS/movie.ogg" type="video/ogg" />
+        <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+        <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian" />
+    </video>
+    <hr />
+
+    <h2>&lt;wbr&gt;</h2>
+    <p>
+        To learn AJAX, you must be familiar with the XML<wbr />Http<wbr />Request
+            Object.
+        </p>
+    <br />
+</body>
+
+</html>
