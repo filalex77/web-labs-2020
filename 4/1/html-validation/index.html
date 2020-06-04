@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Lab 4/1</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <style type="text/css">
+        input:not(:placeholder-shown):invalid {
+            border-color: red;
+        }
+
+        span {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" x-data="imageFormData()">
+        <img id="landscape" src="landscape.jpeg" :width="width" :height="height" :alt="alternativeText"
+            :style="`border-width: ${borderWidth}px; border-color: ${borderColor}`" />
+        <br /><br />
+
+        <form id="imagePropsForm">
+            <h5>Зміна розмірів</h5>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Ширина</span>
+                </div>
+                <input name="width" x-model.debounce.number="width" type="number" class="form-control"
+                    placeholder="Ширина" required />
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Висота</span>
+                </div>
+                <input name="height" x-model.debounce.number="height" type="number" class="form-control"
+                    placeholder="Висота" required />
+            </div>
+            <br />
+
+            <h5>Зміна рамки</h5>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Товщина рамки</span>
+                </div>
+                <input name="borderWidth" x-model.debounce.number="borderWidth" type="number" class="form-control"
+                    placeholder="Товщина рамки" required />
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Колір рамки</span>
+                </div>
+                <input name="borderColor" x-model.debounce="borderColor" type="text" class="form-control"
+                    placeholder="Колір рамки" required />
+            </div>
+
+            <h5>Додатково</h5>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Альтернативний текст</span>
+                </div>
+                <input name="alternativeText" x-model.debounce="alternativeText" type="text" class="form-control"
+                    pattern="[\w ]+" placeholder="Альтернативний текст" required />
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        function imageFormData() {
+            return {
+                width: 100,
+                height: 100,
+                borderWidth: 0,
+                borderColor: 'black',
+                alternativeText: 'IAmAnImage'
+            }
+        }
+    </script>
+</body>
+
+</html>
